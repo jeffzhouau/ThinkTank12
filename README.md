@@ -2,6 +2,8 @@
 
 > 12 world-class business minds advising on your strategy — simultaneously. The first open-source SkillBot on LoomLoom, and the best reference for creators learning to build AI skillbots.
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 ---
 
 ## What Is This
@@ -95,9 +97,9 @@ ThinkTank-12 runs on the LoomLoom platform. The architecture above shows the ful
 ```
 thinktank-12-open-source/
 ├── README.md                  # This file (English)
-├── README.zh.md               # Chinese version
+├── README.zh-CN.md            # Chinese version
 ├── CREATOR-TUTORIAL.md        # Creator tutorial (English)
-├── CREATOR-TUTORIAL.zh.md     # Creator tutorial (Chinese)
+├── CREATOR-TUTORIAL.zh-CN.md  # Creator tutorial (Chinese)
 ├── template.json              # Full TemplateSpec JSON (deployable)
 ├── knowledge-base.md          # 12 council member thinking frameworks
 ├── attribution.md             # Attribution analysis

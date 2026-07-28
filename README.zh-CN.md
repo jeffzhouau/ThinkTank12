@@ -2,6 +2,8 @@
 
 > 12 位世界顶级商业智囊同时为你出谋划策。LoomLoom 平台首个开源 SkillBot，也是创作者学习构建 AI 技能体的最佳范本。
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 ---
 
 ## 这是什么
@@ -10,7 +12,7 @@
 
 它也是 LoomLoom 创作者生态的**教学案例**——完整开源了 TemplateSpec JSON、知识库、DAG 设计思路，任何人可以复制、修改、商用。
 
-> 想创建自己的 SkillBot？阅读 **[创作者教程](CREATOR-TUTORIAL.zh.md)**，从灵感到收入，一步步学会构建爆款技能体。
+> 想创建自己的 SkillBot？阅读 **[创作者教程](CREATOR-TUTORIAL.zh-CN.md)**，从灵感到收入，一步步学会构建爆款技能体。
 
 ## 12 位智囊
 
