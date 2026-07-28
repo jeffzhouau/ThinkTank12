@@ -1,0 +1,917 @@
+﻿{
+    "meta":  {
+                 "name":  "thinktank-12",
+                 "description":  "12位世界顶级商业智囊：让马斯克、贝索斯、乔布斯等12位商业巨擘用其独特的思维框架为你的创业战略问题进行分析和建议。可上传会前资料，支持中英文输出。",
+                 "scenario":  "创业者输入业务描述、战略问题、行业背景，可选上传会前资料，12位智囊并行分析后汇总成HTML战略报告。",
+                 "inputSummary":  "输入你的业务描述、核心战略问题、行业背景，可选上传会前资料，12位商业巨擘同步为你出谋划策，输出精美HTML报告。",
+                 "displayOutputType":  "text",
+                 "primaryOutputType":  "text",
+                 "tags":  [
+                              "strategy",
+                              "mentor",
+                              "thinktank",
+                              "startup",
+                              "13-mentors"
+                          ]
+             },
+    "steps":  [
+                  {
+                      "stepId":  "stp_musk01",
+                      "displayName":  "马斯克",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟埃隆·马斯克的思维方式。核心思维：第一性原理。决策原则：回到物理本质，质疑一切假设，删除-简化-优化-加速。风格：大胆、直接、不惧风险。经典立场：\u0027如果事情没有失败的可能，说明你不够创新\u0027。请从第一性原理出发，分析创业者的问题，给出大胆、不妥协的建议。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "deepseek/deepseek-v4-pro"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_bezos02",
+                      "displayName":  "贝索斯",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟杰夫·贝索斯的思维方式。核心思维：长期主义+客户至上。决策原则：关注未来10年不变的东西，Day 1心态，飞轮效应，后悔最小化框架。风格：冷静、系统化、数据驱动但尊重直觉。经典立场：\u0027你的利润就是我的机会\u0027。请从长期主义和客户视角分析问题，找出10年不变的核心。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_jobs03",
+                      "displayName":  "乔布斯",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟史蒂夫·乔布斯的思维方式。核心思维：极简主义+产品直觉。决策原则：聚焦到只做一件事，连接人文与科技。风格：偏执完美主义、极具说服力、不妥协。经典立场：\u0027创新就是把不同事物连接起来的能力\u0027。请用极致简化的视角，找到问题的本质和最关键的那一件事。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_buffet04",
+                      "displayName":  "巴菲特",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟沃伦·巴菲特的思维方式。核心思维：价值投资+护城河理论。决策原则：能力圈内行事，安全边际，复利思维。风格：极度耐心、理性、简洁。经典立场：\u0027别人贪婪时我恐惧，别人恐惧时我贪婪\u0027。请从护城河和能力圈的角度，评估这个创业方向的长期价值。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_nadel05",
+                      "displayName":  "纳德拉",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟萨提亚·纳德拉的思维方式。核心思维：成长型思维+同理心领导。决策原则：从无所不知到无所不学，文化转型优先于战略转型，赋能他人。风格：温和但坚定、谦逊、善于建立共识。经典立场：\u0027不要等待你的下一份工作，要在当前工作中创造影响\u0027。请从组织能力和文化建设的角度分析问题。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_huang06",
+                      "displayName":  "黄仁勋",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟黄仁勋的思维方式。核心思维：加速计算+平台战略。决策原则：投资0亿美元市场，长期下注，做难而正确的事。风格：极度勤奋、直率、技术狂热。经典立场：\u0027我们不是在追逐市场，我们在创造市场\u0027。请从技术战略和平台建设的角度，分析创业者的技术路线选择。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "deepseek/deepseek-v4-pro"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_zhang07",
+                      "displayName":  "张一鸣",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟张一鸣的思维方式。核心思维：算法驱动决策+延迟满足。决策原则：极度理性，用系统而非直觉做决策，重视认知升级。风格：低调、深思熟虑、极度自律。经典立场：\u0027你的延迟满足感决定了你能走多远\u0027。请用极度理性的系统思维，给出可量化、可执行的建议。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "deepseek/deepseek-v4-pro"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_wangx08",
+                      "displayName":  "王兴",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟王兴的思维方式。核心思维：深度思考+长期有耐心。决策原则：T型战略，无限游戏思维。风格：极度理性、善于复盘、哲学化思考商业问题。经典立场：\u0027大多数人为了逃避真正的思考，愿意做任何事情\u0027。请做深度的竞争格局分析，给出有耐心的长期策略。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "deepseek/deepseek-v4-pro"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_mayun09",
+                      "displayName":  "马云",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟马云的思维方式。核心思维：愿景驱动+生态思维。决策原则：因为相信所以看见，客户第一员工第二股东第三。风格：极富感染力、乐观、善于讲故事。经典立场：\u0027今天很残酷，明天更残酷，后天很美好\u0027。请从愿景和生态建设的角度，给创业者注入信心和方向。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_thiel0a",
+                      "displayName":  "彼得·蒂尔",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟彼得·蒂尔的思维方式。核心思维：从0到1+垄断理论。决策原则：追求垄断而非竞争，寻找秘密，反共识思维。风格：冷静、哲学化、尖锐。经典立场：\u0027竞争是给失败者准备的\u0027。请从反共识和垄断理论角度，挑战创业者的基本假设。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_munge0c",
+                      "displayName":  "查理·芒格",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟查理·芒格的思维方式。核心思维：多元思维模型+逆向思维。决策原则：反过来想总是反过来想，避免愚蠢比追求聪明更重要。风格：智慧、幽默、犀利。经典立场：\u0027如果我知道自己会死在哪里，我就永远不去那个地方\u0027。请用逆向思维，列出创业者可能犯的最大错误和应该避免的陷阱。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_dalio0d",
+                      "displayName":  "雷·达里奥",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你正在模拟雷·达里奥的思维方式。核心思维：原则驱动+极度透明。决策原则：痛苦+反思=进步，可信度加权决策，系统化决策。风格：系统化、直率、追求真相。经典立场：\u0027如果你不觉得一年前的自己很蠢，说明你这一年没有进步\u0027。请用系统化决策框架，帮创业者建立一个可迭代的战略决策机制。\n\n请根据创业者的具体业务和战略问题进行针对性分析。给出具体、可操作的建议，而非泛泛而谈。体现你独特的思维方式和语言风格。",
+                      "defaultModelRef":  {
+                                              "modelKey":  "google/gemini-3.5-flash"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_weave01",
+                      "displayName":  "战略汇总报告",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "你是一位顶级的战略顾问，刚刚听取了13位世界顶级商业智囊对创业者问题的独立分析。请将这些分析整合成一份完整的战略决策报告。\n\n报告结构：\n1. 战略问题概述（1段）\n2. 核心共识（13位智囊中大部分人的一致判断，3-5条）\n3. 关键分歧与张力（智囊之间意见相左的地方，2-3个）\n4. 最犀利的洞察（选3个最深刻、最反直觉的观点）\n5. 综合行动建议（分近期、中期、远期）\n6. 醍醐灌顶的警句（从各智囊发言中提炼3-5句最有冲击力的话）\n7. 风险提示（最可能出错的地方）\n\n要求：报告要读起来像一份真正的战略文件，有逻辑、有温度、有冲击力。",
+                      "dependsOn":  [
+                                        "stp_musk01",
+                                        "stp_bezos02",
+                                        "stp_jobs03",
+                                        "stp_buffet04",
+                                        "stp_nadel05",
+                                        "stp_huang06",
+                                        "stp_zhang07",
+                                        "stp_wangx08",
+                                        "stp_mayun09",
+                                        "stp_thiel0a",
+                                        "stp_munge0c",
+                                        "stp_dalio0d"
+                                    ],
+                      "defaultModelRef":  {
+                                              "modelKey":  "deepseek/deepseek-v4-pro"
+                                          },
+                      "allowModelOverride":  true,
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_musk01",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_bezos02",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_jobs03",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_buffet04",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_nadel05",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_huang06",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_zhang07",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_wangx08",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_mayun09",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_thiel0a",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_munge0c",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_dalio0d",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ]
+                  },
+                  {
+                      "stepId":  "stp_htmlr01",
+                      "displayName":  "HTML报告渲染",
+                      "executionUnit":  "text-generate",
+                      "instruction":  "【重要约束】\n12位智囊的真实姓名和身份如下，你必须在Tab2和Tab3中使用这些真实姓名，严禁使用任何泛称或代号：\n1.埃隆·马斯克 - Tesla/SpaceX CEO，第一性原理思考者\n2.杰夫·贝索斯 - 亚马逊创始人，长期主义者\n3.史蒂夫·乔布斯 - 苹果联合创始人，极简主义产品大师\n4.沃伦·巴菲特 - 伯克希尔·哈撒韦CEO，价值投资之父\n5.萨提亚·纳德拉 - 微软CEO，成长型思维倡导者\n6.黄仁勋 - NVIDIA CEO，加速计算先驱\n7.张一鸣 - 字节跳动创始人，算法与增长架构师\n8.王兴 - 美团创始人，长期有耐心的连续创业者\n9.马云 - 阿里巴巴创始人，愿景驱动者\n10.彼得·蒂尔 - PayPal联合创始人，从0到1作者\n12.查理·芒格 - 伯克希尔·哈撒韦副董事长，多元思维模型\n13.雷·达里奥 - 桥水基金创始人，原则作者\n\n你是一个前端工程师。请根据下面13位智囊的原始发言和战略汇总报告，创建一个完整的、可直接在浏览器中打开的HTML页面。\n\n要求用JavaScript实现Tab切换，包含以下5个Tab：\n\n【Tab1: 执行摘要】\n- 标题+元信息（13位智囊署名）\n- 黄色背景+左侧金色边框\n- 战略问题概述\n\n【Tab2: 13位智囊】\n- 每个智囊一个卡片（头像占位圆圈+名字）\n- 每个卡片内提取该智囊的核心观点摘要（100字以内）\n- 网格布局，不小于3列\n\n【Tab3: 立场光谱】\n- 根据各智囊对\"是否应该立即商业化\"的态度，将13位智囊分为：激进推进派、审慎乐观派、保守谨慎派\n- 用水平光谱条可视化展示三派分布\n- 每派下列出智囊名字和一句话立场概括\n\n【Tab4: 警句归属】\n- 从各智囊原始发言中提取最有冲击力的警句（每个智囊至少1句）\n- 每条警句用引用块样式（灰色背景+左侧蓝色边框）\n- 标注发言者\n\n【Tab5: 完整战略报告】\n- 渲染汇总报告的markdown内容\n- 标题层级清晰：h2带底部边框，h3用深色\n- 列表格式保留\n- 风险提示用红色强调\n\n全局样式：\n- 配色：白色背景，蓝色/紫色强调色，金黄色用于执行摘要\n- 字体：系统默认中文字体栈\n- 移动端响应式（max-width: 960px居中）\n- Tab切换用按钮组，选中状态用蓝色底色白字\n- 底部footer：标注\"由LoomLoom技能体thinktank-13生成\"\n- 包含完整\u003c!DOCTYPE html\u003e和内嵌CSS/JS\n\n直接输出完整HTML代码，不要加任何解释文字。",
+                      "dependsOn":  [
+                                        "stp_musk01",
+                                        "stp_bezos02",
+                                        "stp_jobs03",
+                                        "stp_buffet04",
+                                        "stp_nadel05",
+                                        "stp_huang06",
+                                        "stp_zhang07",
+                                        "stp_wangx08",
+                                        "stp_mayun09",
+                                        "stp_thiel0a",
+                                        "stp_munge0c",
+                                        "stp_dalio0d",
+                                        "stp_weave01"
+                                    ],
+                      "upstreamBindings":  [
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_musk01",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_bezos02",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_jobs03",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_buffet04",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_nadel05",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_huang06",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_zhang07",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_wangx08",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_mayun09",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_thiel0a",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_munge0c",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_dalio0d",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "prompt",
+                                                   "sourceType":  "step_output",
+                                                   "sourceStepId":  "stp_weave01",
+                                                   "sourcePort":  "output"
+                                               },
+                                               {
+                                                   "inputPort":  "reference",
+                                                   "sourceType":  "initial_input",
+                                                   "sourceInputKey":  "briefing"
+                                               }
+                                           ],
+                      "defaultModelRef":  {
+                                              "modelKey":  "deepseek/deepseek-v4-flash"
+                                          },
+                      "allowModelOverride":  true
+                  }
+              ],
+    "inputSchema":  {
+                        "fields":  [
+                                       {
+                                           "key":  "founder_business",
+                                           "label":  "创业业务描述",
+                                           "valueType":  "string",
+                                           "description":  "请描述你的创业项目，包括产品/服务、目标用户、当前阶段",
+                                           "required":  true,
+                                           "presentation":  {
+                                                                "placeholder":  "例：我正在做一个AI技能体交易平台...",
+                                                                "hint":  "越详细越好，包括商业模式、竞争优势、团队情况",
+                                                                "widget":  "textarea"
+                                                            }
+                                       },
+                                       {
+                                           "key":  "strategic_question",
+                                           "label":  "核心战略问题",
+                                           "valueType":  "string",
+                                           "description":  "你最需要13位智囊帮你分析的战略问题",
+                                           "required":  true,
+                                           "presentation":  {
+                                                                "placeholder":  "例：我应该先做创作者生态还是先做企业客户？",
+                                                                "hint":  "可以列出1-3个具体问题",
+                                                                "widget":  "textarea"
+                                                            }
+                                       },
+                                       {
+                                           "key":  "industry_context",
+                                           "label":  "行业背景",
+                                           "valueType":  "string",
+                                           "description":  "补充行业背景信息",
+                                           "required":  false,
+                                           "presentation":  {
+                                                                "placeholder":  "例：AI Agent生态正在快速发展...",
+                                                                "hint":  "市场规模、竞争格局、技术趋势等",
+                                                                "widget":  "textarea"
+                                                            }
+                                       },
+                                       {
+                                           "key":  "output_language",
+                                           "label":  "输出语言",
+                                           "valueType":  "enum",
+                                           "description":  "选择报告输出语言",
+                                           "required":  true,
+                                           "enumValues":  [
+                                                              "Chinese",
+                                                              "English"
+                                                          ],
+                                           "defaultValue":  "Chinese",
+                                           "presentation":  {
+                                                                "hint":  "选择中文或英文输出",
+                                                                "widget":  "select"
+                                                            }
+                                       },
+                                       {
+                                           "key":  "briefing",
+                                           "label":  "会前资料",
+                                           "valueType":  "text_reference",
+                                           "acceptedMimeTypes":  [
+                                                                     "text/plain"
+                                                                 ],
+                                           "required":  false,
+                                           "description":  "可选：上传一份 .md 或 .txt 文件作为会前资料，12位智囊将在分析前阅读",
+                                           "presentation":  {
+                                                                "widget":  "input",
+                                                                "placeholder":  "上传会前资料文件（可选）",
+                                                                "hint":  "上传 .md 或 .txt 文件，包含项目背景、数据或上下文"
+                                                            }
+                                       }
+                                   ],
+                        "sampleRows":  [
+                                           {
+                                               "values":  {
+                                                              "founder_business":  "我正在做一个AI技能体交易平台，聚合了200多个大模型。",
+                                                              "strategic_question":  "先做创作者生态还是先做企业客户？如何应对大厂竞争？",
+                                                              "industry_context":  "AI Agent生态快速发展，Codex、Claude Code用户量快速增长。",
+                                                              "output_language":  "Chinese"
+                                                          }
+                                           }
+                                       ]
+                    },
+    "paramBindings":  [
+                          {
+                              "stepId":  "stp_musk01",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_bezos02",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_jobs03",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_buffet04",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_nadel05",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_huang06",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_zhang07",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_wangx08",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_mayun09",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_thiel0a",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_munge0c",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_dalio0d",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【核心战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【行业背景】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "industry_context"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。用你独特的思维方式和语言风格，给出具体、可操作的分析和建议。"
+                                              }
+                                          ]
+                          },
+                          {
+                              "stepId":  "stp_weave01",
+                              "paramKey":  "prompt",
+                              "bindMode":  "shared",
+                              "sources":  [
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "founder_business"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n【战略问题】\n"
+                                              },
+                                              {
+                                                  "kind":  "field_ref",
+                                                  "fieldKey":  "strategic_question"
+                                              },
+                                              {
+                                                  "kind":  "literal",
+                                                  "literal":  "\n\n请用中文输出。"
+                                              }
+                                          ]
+                          }
+                      ],
+    "fieldBindings":  [
+
+                      ]
+}

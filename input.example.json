@@ -1,0 +1,6 @@
+{
+  "founder_business": "我正在做一个AI技能体交易平台，聚合了200多个大模型，让创作者可以在上面开发和销售技能体（SkillBot），用户通过Codex、Claude Code、WorkBuddy等AI助手安装后使用。目前已经有一些创作者在试用，但商业化还没开始。",
+  "strategic_question": "我应该先做创作者生态还是先做企业客户？这两条路各有什么风险？另外，如果大厂（比如OpenAI、Anthropic）在他们的平台上内置了类似功能，我应该怎么应对？",
+  "industry_context": "AI Agent生态正在快速发展，Codex、Claude Code、Cursor等工具的用户量快速增长。同时，大模型厂商也在建设自己的Agent生态。技能体/插件市场正在成为新的竞争焦点。",
+  "output_language": "Chinese"
+}

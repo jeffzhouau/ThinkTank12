@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>顶级智囊团 ThinkTank-12 · DAG 流程图</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0f1117;
+    color: #e1e4e8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; justify-content: center; align-items: center;
+    min-height: 100vh; padding: 40px;
+  }
+  .container {
+    width: 100%; max-width: 1200px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 40px;
+  }
+  h1 {
+    font-size: 28px; font-weight: 700; text-align: center;
+    margin-bottom: 8px; color: #f0f6fc;
+  }
+  .subtitle {
+    text-align: center; color: #8b949e; font-size: 14px;
+    margin-bottom: 32px;
+  }
+  .mermaid {
+    display: flex; justify-content: center;
+  }
+  .legend {
+    display: flex; gap: 24px; justify-content: center; margin-top: 32px;
+    flex-wrap: wrap;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 8px; font-size: 13px; color: #8b949e;
+  }
+  .legend-dot {
+    width: 12px; height: 12px; border-radius: 3px;
+  }
+  .legend-dot.input { background: #58a6ff; }
+  .legend-dot.deepseek { background: #3fb950; }
+  .legend-dot.gemini { background: #d2a8ff; }
+  .legend-dot.weave { background: #f0883e; }
+  .legend-dot.html { background: #f85149; }
+  .stats {
+    display: flex; gap: 32px; justify-content: center; margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .stat {
+    text-align: center;
+  }
+  .stat-value {
+    font-size: 32px; font-weight: 700; color: #f0f6fc;
+  }
+  .stat-label {
+    font-size: 12px; color: #8b949e; margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>顶级智囊团 ThinkTank-12</h1>
+  <p class="subtitle">DAG 工作流 —— 12 位智囊并行分析 → 战略汇总 → HTML 报告</p>
+
+  <div class="mermaid">
+graph TB
+    subgraph INPUT["用户输入（5 个字段）"]
+        direction LR
+        F1["创业业务描述"]
+        F2["核心战略问题"]
+        F3["行业背景"]
+        F4["输出语言"]
+        F5["会前资料 📎"]
+    end
+
+    INPUT --> STEPS
+
+    subgraph STEPS["12 位智囊并行分析"]
+        direction LR
+        S1["⚡ 马斯克<br/>DeepSeek V4 Pro"]
+        S2["📦 贝索斯<br/>Gemini 3.5 Flash"]
+        S3["🍎 乔布斯<br/>Gemini 3.5 Flash"]
+        S4["💰 巴菲特<br/>Gemini 3.5 Flash"]
+        S5["☁️ 纳德拉<br/>Gemini 3.5 Flash"]
+        S6["🖥️ 黄仁勋<br/>DeepSeek V4 Pro"]
+        S7["📐 张一鸣<br/>DeepSeek V4 Pro"]
+        S8["🍚 王兴<br/>DeepSeek V4 Pro"]
+        S9["🎤 马云<br/>Gemini 3.5 Flash"]
+        SA["🔮 彼得·蒂尔<br/>Gemini 3.5 Flash"]
+        SB["🧠 查理·芒格<br/>Gemini 3.5 Flash"]
+        SC["🌉 雷·达里奥<br/>Gemini 3.5 Flash"]
+    end
+
+    S1 --> WEAVE
+    S2 --> WEAVE
+    S3 --> WEAVE
+    S4 --> WEAVE
+    S5 --> WEAVE
+    S6 --> WEAVE
+    S7 --> WEAVE
+    S8 --> WEAVE
+    S9 --> WEAVE
+    SA --> WEAVE
+    SB --> WEAVE
+    SC --> WEAVE
+
+    WEAVE["📊 战略汇总报告<br/>DeepSeek V4 Pro<br/>dependsOn: 12 个智囊"]
+
+    WEAVE --> HTML
+    S1 --> HTML
+    S2 --> HTML
+    S3 --> HTML
+    S4 --> HTML
+    S5 --> HTML
+    S6 --> HTML
+    S7 --> HTML
+    S8 --> HTML
+    S9 --> HTML
+    SA --> HTML
+    SB --> HTML
+    SC --> HTML
+
+    HTML["🎨 HTML 报告渲染<br/>DeepSeek V4 Flash<br/>dependsOn: 12 个智囊 + 汇总"]
+
+    HTML --> OUTPUT["📄 精美 HTML 报告<br/>5 个 Tab 可交互"]
+
+    style INPUT fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+    style F1 fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+    style F2 fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+    style F3 fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+    style F4 fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+    style F5 fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+
+    style S1 fill:#0d3320,stroke:#3fb950,color:#e1e4e8
+    style S2 fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style S3 fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style S4 fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style S5 fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style S6 fill:#0d3320,stroke:#3fb950,color:#e1e4e8
+    style S7 fill:#0d3320,stroke:#3fb950,color:#e1e4e8
+    style S8 fill:#0d3320,stroke:#3fb950,color:#e1e4e8
+    style S9 fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style SA fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style SB fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+    style SC fill:#1a1230,stroke:#d2a8ff,color:#e1e4e8
+
+    style WEAVE fill:#3d1f00,stroke:#f0883e,color:#e1e4e8
+    style HTML fill:#3d0808,stroke:#f85149,color:#e1e4e8
+    style OUTPUT fill:#0d419d,stroke:#58a6ff,color:#e1e4e8
+    style STEPS fill:none,stroke:none
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-value">14</div>
+      <div class="stat-label">总步骤数</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">12</div>
+      <div class="stat-label">并行步骤</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">2</div>
+      <div class="stat-label">汇聚步骤</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">3</div>
+      <div class="stat-label">模型种类</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">~¥0.04</div>
+      <div class="stat-label">单次执行成本</div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot input"></div> 用户输入</div>
+    <div class="legend-item"><div class="legend-dot deepseek"></div> DeepSeek V4 Pro</div>
+    <div class="legend-item"><div class="legend-dot gemini"></div> Gemini 3.5 Flash</div>
+    <div class="legend-item"><div class="legend-dot weave"></div> 汇总步骤</div>
+    <div class="legend-item"><div class="legend-dot html"></div> HTML 渲染</div>
+  </div>
+</div>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'dark',
+    themeVariables: {
+      primaryColor: '#1c2333',
+      primaryTextColor: '#e1e4e8',
+      lineColor: '#484f58',
+      fontSize: '13px'
+    },
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis',
+      padding: 20
+    }
+  });
+</script>
+</body>
+</html>
