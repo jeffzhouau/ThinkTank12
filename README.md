@@ -8,7 +8,7 @@
 
 ## What Is This
 
-ThinkTank-12 is a **SkillBot** running on [CogFoundry LoomLoom](https://github.com/Cogfoundry-ai/loomloom) / [Shengsuan Cloud](https://shengsuanyun.com/loomloom). You describe your business, strategic question, and industry context — optionally upload pre-reading materials — and 12 AI incarnations of legendary business leaders analyze in parallel, converging into a polished HTML strategy report.
+ThinkTank-12 is a **SkillBot** running on [CogFoundry LoomLoom](https://github.com/Cogfoundry-labs/loomloom) / [Shengsuan Cloud](https://shengsuanyun.com/loomloom). You describe your business, strategic question, and industry context — optionally upload pre-reading materials — and 12 AI incarnations of legendary business leaders analyze in parallel, converging into a polished HTML strategy report.
 
 It is also the **teaching case** for the LoomLoom creator ecosystem — the full TemplateSpec JSON, knowledge base, and DAG design are open-sourced. Anyone can copy, modify, and commercialize.
 
